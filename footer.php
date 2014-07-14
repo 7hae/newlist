@@ -1,24 +1,14 @@
 </div><!-- Ends Container -->
 
 <div class="container news">
-
-<div class="cols-lg-12" style="text-align:center;font-size:20px">		
-<a href="#" id="top-return">			
-<?php _e ('^Top', 'newsframe' ); ?>		
-</a>	
-</div>
-
 <div class="col-lg-12">
-<?php global $newsframe_options; $newsframe_settings = get_option( 'newsframe_options', $newsframe_options ); ?>
-
 <ul id="footermenu">
 	<?php wp_nav_menu( array( 'theme_location' => 'bottom-menu' ) ); ?>
 </ul>
 	<br /><br /><br />
-<small>&copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?></small><br>
-<input type="hidden" id="load_number" value="0" />
+<p style="text-align:center">&copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?></p><br>
 </div><br />
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/bootstrap/js/jquery.js"></script>
+<p id="back-to-top"><a href="#top"><span></span></a></p>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
@@ -31,6 +21,7 @@ for(imgi = 0 ;imgi < imgsnum;imgi++){
         imgs[imgi].className += ' img-responsive';
 	 }
 }
+
 </script>
 <script type="text/javascript">
 	var cat=<?php echo isset($_GET['cat'])?$_GET['cat']:0;?>;
@@ -73,3 +64,26 @@ for(imgi = 0 ;imgi < imgsnum;imgi++){
         });
     });
     </script>
+<script>
+$(function(){
+	//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+	$(function () {
+		$(window).scroll(function(){
+			if ($(window).scrollTop()>100){
+				$("#back-to-top").css('display','block');
+			}
+			else
+			{
+				$("#back-to-top").css('display','none');
+			}
+		});
+
+		//当点击跳转链接后，回到页面顶部位置
+
+		$("#back-to-top").click(function(){
+			$('body,html').animate({scrollTop:0},1000);
+			return false;
+		});
+	});
+});
+</script>

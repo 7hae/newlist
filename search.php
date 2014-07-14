@@ -1,21 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
-<div class="col-lg-8" id="news_list">
+<div class="col-lg-8">
 	<?php if (have_posts()) : ?>
-	<div class="news">
-		<header id="archive-header">
-		<h1 class="archive-title">
-		<?php
-		printf( __( '%s', 'newsframe' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-		?></h1>
-		<?php
-		$category_description = category_description();
-		if ( ! empty( $category_description ) )
-		echo apply_filters( 'category_archive_meta',
-		'<div class="cat-archive-meta">' . $category_description . '</div>' );
-		?>
-		</header>
-	</div>
 	<?php while (have_posts()) : the_post(); ?>
 	<div class="news list">
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -59,21 +45,21 @@
 				<?php the_excerpt(); ?>
 			</div>
 			<div class="col-lg-12">
-			<ul>
-			<li class="post_tags">标签:</li>&nbsp;&nbsp; 			
+			<p>
+			<span class="post_tags">标签:</span>&nbsp;&nbsp; 			
 			<?php
 				
 				$tags = wp_get_post_tags($post->ID);
 				foreach ($tags as $tag) {
 					?>
-					<li class="post_tag"><a href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a></li>
+					<span class="post_tag"><a href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a></span>&nbsp;&nbsp;
 					<?php
 				}
 					if(count($tags) == 0){
-						echo '<li class="post_tag_none">暂无标签</li>';
+						echo '<span class="post_tag_none">暂无标签</span>';
 					}
 			?>
-			</ul>
+			</p>
 		</div>
 			<div style="clear:both"></div>
 			<?php } ?>
