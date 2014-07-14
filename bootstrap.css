@@ -5864,11 +5864,12 @@ p{line-height:25px;}
 .comment_number:hover{background-color:#333333;}
 #news_list{padding-right:22px;border-right:1px solid #e6e6e6}
 .news_list{padding-right:22px;border-right:1px solid #e6e6e6}
-.xg-news{padding:10px;border:1px solid #dddddd;margin:20px 0;}
+.xg-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:none;}
 .xg-news ul{margin:0px;padding:0px}
 .xg-news li{padding:10px 0px;border-top:1px dashed #eeeeee}
 .scroll_box{padding-bottom:30px;text-align: center;}
 .news ul{padding:0px;margin:0px}
+.xg-news-text{display:none}
 
 @media screen and (max-width: 680px) {
 	.scroll_box{margin-bottom:0px}
@@ -5943,6 +5944,7 @@ p#back-to-top a span{
     -o-transition:background 1s;
 }
 
+.JIATHIS_IMG_NO{border-radius:0px;}
 
 
 
