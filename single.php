@@ -50,23 +50,22 @@
 					</section><!-- #post-content -->
 				</article>
 			<?php endwhile; ?>
-		<div class="col-lg-12" style="margin:30px 0">
-			<p>
-			<span class="post_tags">标签:</span>&nbsp;&nbsp; 			
+		<p class="col-lg-12" style="margin:30px 0;line-height:40px">
+			<a href="javascript:void()" class="post_tags">标签:</a>&nbsp;&nbsp; 			
 			<?php
 				$tags = wp_get_post_tags($post->ID);
 				foreach ($tags as $tag) {
 			?>
-					<span class="post_tag"><a href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a></span>&nbsp;&nbsp;
+					<a class="post_tag" href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a>
 			<?php
 				}
 				if(count($tags) == 0){
-					echo '<span class="post_tag_none">暂无标签</span>';
+					echo '<a  href="javascript:void()" class="post_tag_none">暂无标签</a>';
 				}
 			?>
-			</p>
-		</div>
-		<div class="col-lg-12" style="margin:30px 0">
+		</p>
+		<div style="clear:both"></div>
+		<div class="col-lg-12">
 			<!-- JiaThis Button BEGIN -->
 				<div class="jiathis_style_32x32">
 					<a class="jiathis_button_qzone"></a>
@@ -80,6 +79,8 @@
 				<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 			<!-- JiaThis Button END -->
 		</div>
+		
+		<div style="clear:both"></div>
 		<section id="article-nav" style="margin-top:50px">
 			上一篇<?php previous_post_link(); ?> -- <?php next_post_link(); ?>下一篇
 		</section><!--End Article Navigation-->
@@ -90,7 +91,7 @@
 <div class="ujian-hook"></div>
 <script type="text/javascript">var ujian_config = {num:4,itemTitle:'相关新闻：',picSize:152,textHeight:45,mouseoverColor:'#ffffff',borderColor:'#ffffff'};</script>
 <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=1948867"></script>
-<a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+
 <!-- UJian Button END -->
 </div>
 

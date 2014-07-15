@@ -37,19 +37,17 @@
 		$content.="<p>".mb_strimwidth(get_post($v->ID)->post_content, 0, 200,"...")."<a class='more' href='/newslist/?p=".$v->ID."'>&#8230;全文</a></p>";
 		$content.="</div>";
 
-		$content.="<div class='col-lg-12'>";
-		$content.="<ul>";
-		$content.="<li class='post_tags'>标签:</li>&nbsp;&nbsp;"; 			
-			
+		$content.="<p class='col-lg-12' style='line-height:40px'>";
+		$content.="<a href='javascript:void()' class='post_tags'>标签:</a>&nbsp;&nbsp;"; 
 		$tags = wp_get_post_tags($v->ID);
 		foreach ($tags as $tag) {
-			$content.="<li class='post_tag'><a href='/newslist/?tag=".$tag->name."'>".$tag->name."</a></li>";
+			$content.="<a class='post_tag' href='/newslist/?tag=".$tag->name."'>".$tag->name."</a>";
 		}
 		if(count($tags) == 0){
-		$content.="<li class='post_tag_none'>暂无标签</li>";
+		$content.="<a href='javascript:void()' class='post_tag_none'>暂无标签</a>";
 		}
 
-		$content.="</ul></div>";
+		$content.="</p>";
 
 		$content.="<div style='clear:both'></div>";
 		$content.="</article>";

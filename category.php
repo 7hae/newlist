@@ -58,23 +58,20 @@
 			<div class="col-lg-12">
 				<?php the_excerpt(); ?>
 			</div>
-			<div class="col-lg-12">
-			<ul>
-			<li class="post_tags">标签:</li>&nbsp;&nbsp; 			
+			<p class="col-lg-12" style="line-height:40px">
+			<a href="javascript:void()" class="post_tags">标签:</a>&nbsp;&nbsp; 			
 			<?php
-				
 				$tags = wp_get_post_tags($post->ID);
 				foreach ($tags as $tag) {
-					?>
-					<li class="post_tag"><a href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a></li>
-					<?php
-				}
-					if(count($tags) == 0){
-						echo '<li class="post_tag_none">暂无标签</li>';
-					}
 			?>
-			</ul>
-		</div>
+					<a class="post_tag" href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a>
+			<?php
+				}
+				if(count($tags) == 0){
+					echo '<a  href="javascript:void()" class="post_tag_none">暂无标签</a>';
+				}
+			?>
+		</p>
 			<div style="clear:both"></div>
 			<?php } ?>
 		</article>

@@ -3793,7 +3793,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-.navbar_fu{padding-top:26px}
+.navbar_fu{padding-top:13px}
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -5826,13 +5826,16 @@ td.visible-print {
 .time_list li{list-style:none;padding:10px 10px;line-height:15px;border-bottom:1px solid #9999999}
 li{list-style:none}
 p{line-height:25px;}
-.post_tags{padding:4px 9px;background-color:#D14836;color:#ffffff;float: left;}
-.post_tag_none{float: left;margin: 0px 0px 4px 14px;padding:4px 9px;background-color:#333333;color:#ffffff;}
-.post_tag{float: left;margin: 4px 0px 4px 14px;}
-.post_tag a{padding:5px 9px;background-color:#333333;color:#ffffff;}
+.post_tags{padding:4px 9px;background-color:#D14836;color:#ffffff;position:relative;}
+.post_tag_none{position:relative;margin-left:12px;padding:4px 9px;background-color:#333333;color:#ffffff;}
+/*.post_tag{float: left;margin: 4px 0px 4px 14px;}*/
 
+.post_tag{position:relative;margin-left:12px;padding:4px 9px;background-color:#333333;color:#ffffff;}
+.post_tag a{color:#ffffff;}
 
-.post_tag a:hover{background-color:#D14836;}
+.post_tags:hover{color:#ffffff;}
+.post_tag_none:hover{color:#ffffff;}
+.post_tag:hover{background-color:#D14836;color:#ffffff;}
 .post_class{position:relative;top:-3px;}
 .post_class a{font-size:14px;padding:3px 9px;background-color:#333333;color:#ffffff;}
 
@@ -5865,6 +5868,7 @@ p{line-height:25px;}
 #news_list{padding-right:22px;border-right:1px solid #e6e6e6}
 .news_list{padding-right:22px;border-right:1px solid #e6e6e6}
 .xg-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:none;}
+.uj-news{padding:10px;border:1px solid #dddddd;margin:20px 0;}
 .xg-news ul{margin:0px;padding:0px}
 .xg-news li{padding:10px 0px;border-top:1px dashed #eeeeee}
 .scroll_box{padding-bottom:30px;text-align: center;}
@@ -5872,6 +5876,9 @@ p{line-height:25px;}
 .xg-news-text{display:none}
 
 @media screen and (max-width: 680px) {
+	.scroll_box{display:none}
+	.uj-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:none;}
+	.xg-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:block;}
 	.scroll_box{margin-bottom:0px}
 	#news_list{padding-right:0px;border-right:0px solid #e6e6e6}
 	.news_list{padding-right:0px;border-right:0px solid #e6e6e6}
