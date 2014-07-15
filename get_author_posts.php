@@ -4,10 +4,9 @@
 	global $wpdb;
 	$offset=$_POST['offset'];
 	$number=$_POST['number'];
-	$cat=isset($_POST['cat'])?$_POST['cat']:0;
-	$where="category=$cat&offset=".$offset."&numberposts=$number";
-	
-	$posts = get_posts($where); 
+	$cat=$_POST['cat'];
+	$sql="select * from $wpdb->posts where post_status='publish' and post_type='post' and post_author=$cat order by post_date desc limit $offset,$number";
+	$posts=$wpdb->get_results($sql);
 	if(count($posts) == 0){
 		echo '0';exit;
 	}

@@ -64,14 +64,6 @@
 </div>
 	<?php endwhile; ?>
 	<?php endif; ?>
-	
-	<?php if (!have_posts()) : ?>
-		<div class="container">
-		<div class="news list">
-			<p style="">没有所有结果</p>
-		</div>
-		</div>
-	<?php endif; ?>
 	</div>
 <?php get_sidebar(); ?>
 </div>
