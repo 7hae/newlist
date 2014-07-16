@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/bootstrap/css/bootstrap.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/font-icon/css/font.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/flat-ui.css">
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/bootstrap/js/jquery.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery-2.0.3.min.js"></script>
 </head>
 <style>
 	body{font-family:"Microsoft YaHei";background-color:#eeeeee;padding:0 10px;}
