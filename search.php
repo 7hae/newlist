@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<div class="container">
-<div class="col-lg-8">
+<div class="container main_index">
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 	<?php if (have_posts()) : ?>
 	<?php while (have_posts()) : the_post(); ?>
 	<div class="news list">

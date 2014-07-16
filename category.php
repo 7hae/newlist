@@ -3,8 +3,8 @@
 	$category = get_the_category();
 	$car_id=$category[0]->term_id;
 ?>
-<div class="container">
-<div class="col-lg-8" id="news_list">
+<div class="container main_index">
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="news_list">
 	<?php if (have_posts()) : ?>
 	<div class="news">
 		<header id="archive-header">

@@ -3647,7 +3647,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border-bottom: 1px solid #555555
   }
 @media (min-width: 768px) {
@@ -5874,9 +5874,10 @@ p{line-height:25px;}
 .scroll_box{padding-bottom:30px;text-align: center;}
 .news ul{padding:0px;margin:0px}
 .xg-news-text{display:none}
-
+.main_index{padding-top:20px}
 @media screen and (max-width: 680px) {
 	.scroll_box{display:none}
+	.main_index{padding-top:0px}
 	.uj-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:none;}
 	.xg-news{padding:10px;border:1px solid #dddddd;margin:20px 0;display:block;}
 	.scroll_box{margin-bottom:0px}
@@ -5891,7 +5892,7 @@ p{line-height:25px;}
 }
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 768px) {
 	.scroll_box{margin-bottom:0px}
 	#news_list{padding-right:0px;border-right:0px solid #e6e6e6}
 	.news_list{padding-right:0px;border-right:0px solid #e6e6e6}
@@ -5951,9 +5952,10 @@ p#back-to-top a span{
     -o-transition:background 1s;
 }
 
-.JIATHIS_IMG_NO{border-radius:0px;}
-
-
+.JIATHIS_IMG_NO{border-radius:0px !important;}
+.more{color:#D14836}
+.author{border:1px solid #dddddd;padding:20px}
+.author-title{font-weight:700;font-size:16px;}
 
 
 

@@ -2,8 +2,8 @@
 <?php 
 	add_views($post->ID);
 ?>
-	<div class="container">
-		<div class="col-lg-8 news news_list">
+	<div class="container main_index">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 news news_list">
 			<div class="single-article" role="main">
 			<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
@@ -89,9 +89,8 @@
 <div class="col-lg-12 uj-news">
 <!-- UJian Button BEGIN -->
 <div class="ujian-hook"></div>
-<script type="text/javascript">var ujian_config = {num:4,itemTitle:'相关新闻：',picSize:152,textHeight:45,mouseoverColor:'#ffffff',borderColor:'#ffffff'};</script>
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=1948867"></script>
-
+<script type="text/javascript">var ujian_config = {num:4,itemTitle:'相关新闻：',picSize:152,ad1:false,ad2:false,ujian_ad11:false,ujian_ad12:false,textHeight:45,mouseoverColor:'#ffffff',borderColor:'#ffffff'};</script>
+<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js"></script>
 <!-- UJian Button END -->
 </div>
 

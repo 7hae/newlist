@@ -1,4 +1,4 @@
-<div class="col-lg-4 three" id="right">
+<div class="col-lg-4 col-md-4 col-sm-4 three" id="right">
 	<aside id="secondary" class="widget-area" role="complementary">
 		<?php do_action( 'before_widget' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>

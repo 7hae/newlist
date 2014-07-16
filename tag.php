@@ -1,13 +1,13 @@
 <?php // template for tag archives
 	get_header(); ?>
-<div class="container">
-	<div class="col-lg-8 news_list">
+<div class="container main_index">
+	<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 news_list">
 		<div class="archive-view">
 		<?php if (have_posts()) : ?>
 		<header class="news">
 			<h1 class="archive-title">
 			<?php
-			 echo '"'.single_tag_title( '', false ).'"';
+			 echo single_tag_title( '', false );
 			?>
 			</h1>
 			<?php

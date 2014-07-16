@@ -3,15 +3,25 @@
 	global $authordata;
 	$author_id=$authordata->data->ID;
 ?>
-<div class="container">
-<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12" id="news_list">
+<div class="container main_index">
+<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="news_list">
 		<?php if ( have_posts() ) : ?>
 		<?php the_post(); ?>
-	<header class="author-page-header">
-	<h1 class="author-title"><?php echo get_the_author();?></h1>
-	</header><!-- .author-page-header -->
-		<?php rewind_posts(); ?>
-		<?php get_template_part ('authorbox'); ?>
+		
+		<div class="col-lg-12 news list author">
+			<div class="col-lg-3">
+			<div class="author_pic">
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?>
+			</div>
+			</div>
+			<div class="col-lg-8 col-lg-offset-1 author_content">
+			<div class="author_name">
+			<p class="author-title"><i class="icon-user"></i> <?php echo get_the_author();?></p>
+			<p class="author-description"><b>简介：</b><?php echo get_the_author_description();?></p>
+			</div>
+			</div>
+		</div>
+		<div style="clear:both"></div>
 		<?php endif; ?>
 		<?php /* Start the Loop */ ?>
 		<?php while (have_posts()) : the_post(); ?>
