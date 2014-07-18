@@ -1,5 +1,5 @@
 <?php
-	require_once('../../../wp-blog-header.php');
+	include('../../../wp-blog-header.php');
 	require_once('./functions.php');
 	global $wpdb;
 	$offset=$_POST['offset'];
@@ -12,7 +12,7 @@
 	}
 	$content='';
 	foreach($posts as $k=>$v){
-		$sql='select user_login from wp_users where ID='.$v->post_author;
+		$sql='select display_name from wp_users where ID='.$v->post_author;
 		$author=$wpdb->get_var($sql);
 		$cat=get_the_category($v->ID);//获取文章所属分类 
 		//拼接字符串
@@ -30,11 +30,14 @@
 		$content.="&nbsp;&nbsp;<i class='icon-user'></i> <a href='/newslist/?author=1' title='由".$author."发布' rel='author'>".$author."</a><span class='spacer'></span>&nbsp;&nbsp;".$v->post_date."<span class='spacer'></span>&nbsp;&nbsp; 浏览：<span>".$v->click."</span></p>";
 		if(get_post_thumbnail_url($v->ID)){
 		$content.="<div class='col-lg-12'>";
-		$content.="<img src='".get_post_thumbnail_url($v->ID)."' class='img-responsive' />";
+		$content.="<img src='".get_post_thumbnail_url($v->ID)."' class='attachment-large img-responsive' />";
 		$content.="</div>";
 		}
 		$content.="<div>";
-		$content.="<p>".mb_strimwidth(get_post($v->ID)->post_content, 0, 200,"...")."<a class='more' href='/newslist/?p=".$v->ID."'>&#8230;全文</a></p>";
+		$content.="<p>".$v->post_excerpt."</p>";
+		if($v->post_excerpt){
+		$content.="<p class='read-more' style='text-align:right'><a href='/newslist/".urldecode($v->post_name)."' style='padding:3px 6px;background-color:#859FFF;color:#ffffff;border-radius:3px'>阅读全文</a></p>";
+		}
 		$content.="</div>";
 
 		$content.="<p class='col-lg-12' style='line-height:40px'>";

@@ -1,6 +1,6 @@
 </div><!-- Ends Container -->
 
-<div class="container news">
+<div class="container news" style="padding-top:20px">
 <div class="col-lg-12">
 <ul id="footermenu">
 	<?php wp_nav_menu( array( 'theme_location' => 'bottom-menu' ) ); ?>
