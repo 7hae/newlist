@@ -55,20 +55,20 @@ get_header(); ?>
 		<div class="col-lg-12">
 		<?php the_excerpt(); ?>
 		</div><!-- .latest-content -->
-		<p class="col-lg-12" style="line-height:40px">
-			<a href="javascript:void()" class="post_tags">标签:</a>&nbsp;&nbsp; 			
+		<div class='col-lg-12' id='tag-box'><ul>
+			<li class='post_tags'><a href="javascript:void()" class="post_tags">标签:</a></li>&nbsp;&nbsp; 			
 			<?php
 				$tags = wp_get_post_tags($post->ID);
 				foreach ($tags as $tag) {
 			?>
-					<a class="post_tag" href="/newslist/?tag=<?php echo $tag->name;?>"><?php echo $tag->name;?></a>
+					<li class="post_tag"><a href="/newslist/?tag=<?php echo $tag->name;?>" style="word-break:keep-all;white-space:nowrap;"><?php echo $tag->name;?></a></li>
 			<?php
 				}
 				if(count($tags) == 0){
-					echo '<a  href="javascript:void()" class="post_tag_none">暂无标签</a>';
+					echo '<li class="post_tag_none"><a  href="javascript:void()">暂无标签</a></li>';
 				}
 			?>
-		</p>
+		</ul></div>
 <div style="clear:both"></div>
 </div>
 	<?php endwhile; ?>

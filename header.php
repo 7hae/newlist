@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/bootstrap/css/docs.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/font-icon/css/font.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/css/flat-ui.css">
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <style>
 	body{font-family:"Microsoft YaHei";background-color:#eeeeee;padding:0 10px;}
@@ -48,7 +50,7 @@
               <ul class="nav navbar-nav">           
                 <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu') ); ?>
                </ul>          
-              <form class="navbar-form navbar-right" method="get" id="searchform" action="<?php echo esc_url(home_url()); ?>" role="search" style="width: 250px">
+              <form class="navbar-form navbar-right" method="get" id="searchform" action="<?php echo esc_url(home_url()); ?>" role="search">
 	  <div class="form-group">
 		<div class="input-group">
 		  <input class="form-control" name="s" id="navbarInput-01" type="text" placeholder="输入关键字">
@@ -60,6 +62,16 @@
 	</form>
             </div><!-- /.navbar-collapse -->
           </nav><!-- /navbar -->
+		  <form class="navbar-form navbar-right" method="get" id="searchform1" action="<?php echo esc_url(home_url()); ?>" role="search">
+	  <div class="form-group">
+		<div class="input-group">
+		  <input class="form-control" name="s" id="navbarInput-011" type="text" placeholder="输入关键字">
+		  <span class="input-group-btn">
+			<button type="submit" class="btn"><span class="fui-search"></span></button>
+		  </span>            
+		</div>
+	  </div>               
+	</form>
 </div>
 
 

@@ -9,7 +9,7 @@
 <p style="text-align:center">&copy; <?php echo date('Y'); ?> - <?php bloginfo('name'); ?></p><br>
 </div><br />
 <p id="back-to-top"><a href="#top"><span></span></a></p>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>
 <script type="text/javascript">

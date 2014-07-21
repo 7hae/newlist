@@ -13,4 +13,47 @@
 	</aside>
 <?php endif; // end sidebar widget area ?>
 	</aside><!-- #secondary .widget-area -->
+	
 </div>
+
+<script type="text/javascript">
+
+var obj11 = document.getElementById("two_code");
+
+var top11 = getTop(obj11);
+
+var isIE6 = /msie 6/i.test(navigator.userAgent);
+
+window.onscroll = function(){
+
+ 
+
+var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+if (bodyScrollTop > top11){
+
+obj11.style.position = (isIE6) ? "absolute" : "fixed";
+
+obj11.style.top = (isIE6) ? bodyScrollTop + "px" : "10px";
+
+} else {
+
+obj11.style.position = "static";
+
+}
+
+}
+
+function getTop(e){
+
+ 
+
+var offset = e.offsetTop;
+
+if(e.offsetParent != null) offset += getTop(e.offsetParent);
+
+return offset;
+
+}
+
+</script>

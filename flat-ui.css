@@ -1913,7 +1913,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 }
 .navbar-nav > li > a {
   font-size: 15px;
-  padding: 15px 21px;
+  padding: 15px 13px;
   line-height: 23px;
 }
 .navbar-nav .dropdown-toggle .caret {
